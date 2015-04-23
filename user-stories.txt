@@ -1,0 +1,27 @@
+       
+I want to to set an alarm
+
+I want to put on silent/loud/normal
+
+I want to get the current time
+
+I want to speak to my phone
+
+I want to send a message
+
+I want to add a reminder
+
+I want to view reminders
+
+I want to delete reminder
+
+I want  reminder notification
+
+I want to make a call
+
+I want to play the racer game
+
+I want to take a photo
+
+I want to do a bunch of contact stuff
+
