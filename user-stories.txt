@@ -25,3 +25,5 @@ I want to take a photo
 
 I want to do a bunch of contact stuff
 
+git test
+
