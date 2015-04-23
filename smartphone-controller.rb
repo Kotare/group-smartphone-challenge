@@ -8,13 +8,18 @@ class SmartphoneController
 		@contacts = Contacts.new
 	end
 
-	def turn_on 
-		
+	def turn_on
+
 
 	end
 
 	def smartphone_run #LOGIC
 
+	end
+
+	def delete_contact(contact_name)
+		@view.delete_contact(contact_name)
+		@contacts.delete_contact(contact_name)
 	end
 
 	def turn_off
