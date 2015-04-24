@@ -17,7 +17,14 @@ class Contacts
   end
 
   def edit_contact(args)
-    # contact = @contact_list[args[:contact_name]
-    # contact.send(args[:field]) = args[:value]
+    name = args[:contact_name]
+    number = @contact_list[name].number
+    delete_contact(args[:contact_name])
+    case args[:field]
+    when 'name'
+      add_contact(args[:new_value], number)
+    when 'number'
+      add_contact(name, args[:new_value])
+    end
   end
 end
