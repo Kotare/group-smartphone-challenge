@@ -25,6 +25,11 @@ class SmartphoneController
 		@view.view_contacts(@contacts)
 	end
 
+	def search(name)
+		contact = @contacts.search(name)
+		@view.display_search_result(contact)
+	end
+
 	def turn_off
 
 	end
