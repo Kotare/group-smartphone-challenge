@@ -30,7 +30,7 @@ class SmartphoneController
 				@view.exit
 				exit
 			else
-				@view.invalid_command
+				@view.input_error
 			end
 		end
 	end
@@ -58,7 +58,7 @@ class SmartphoneController
 		if (contact)
 			@view.display_search_result(contact)
 		else
-			@view.contact_error(name)
+			@view.input_error
 		end
 	end
 end

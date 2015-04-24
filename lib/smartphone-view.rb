@@ -28,8 +28,8 @@ class SmartphoneView
 			new_value:new_value	}
 	end
 
-  def contact_error(contact_name)
-    puts "Sorry, can't find #{contact_name} in contacts."
+  def input_error
+    puts "Sorry, invalid input."
   end
 
   def delete_contact(contact_name)
@@ -47,5 +47,24 @@ class SmartphoneView
 
   def display_search_result(contact)
     puts "#{contact.name}, #{contact.number}"
+  end
+
+  def exit
+    ascii_cow_goodbye = <<-TEMPLATE
+    puts ******************--GOODBYE!--******************
+                  _     _
+                 (_\___( \,
+                   )___   _  later bro
+                  /( (_)-(_)    /
+       ,---------'         \_
+     //(  ',__,'      \  (' ')
+    //  )              '----'
+   '' ; \     .--.  ,/
+      | )',_,'----( ;
+      ||| '''     '||
+
+    TEMPLATE
+    puts ascii_cow_goodbye
+
   end
 end
