@@ -72,7 +72,6 @@ class SmartphoneController
 		end
 	end
 end
-end
 
 cowphone = SmartphoneController.new
 
