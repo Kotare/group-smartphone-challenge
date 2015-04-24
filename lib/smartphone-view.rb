@@ -1,12 +1,39 @@
 class SmartphoneView
 
 	def welcome
-    puts "Welcome to COW PHONE!"
-    puts "\nWhat would you like to do today? type 'add', 'edit', 'display' or 'delete': "
-    # get_answer
+		system("clear")
+    puts "********************Welcome to COW PHONE!********************"
+    puts
+    ascii_cowphone = <<-TEMPLATE
+                                       /;    ;\\	     __i
+      -Bill Ames-                  __  \\____//	    |---| 
+                                  /{_\\_/   `'\\_     |[_]| 
+                                  \\___   (o)  (o}   |:::|
+       _____________________________/          :-   |:::|  
+   ,-,'`@@@@@@@@       @@@@@@         \\_    `__\\    `\\   \\
+  ;:(  @@@@@@@@@        @@@             \\___(o'o)     \\_=_\\ 
+  :: )  @@@@          @@@@@@        ,'@@(  `===='   
+  :: : @@@@@:          @@@@         `@@@: 					
+  :: \\  @@@@@:       @@@@@@@)    (  '@@@' 					
+  ;; /\\      /`,    @@@@@@@@@\\   :@@@@@)                   
+  ::/  )    {_----------------:  :~`,~~;
+ ;;'`; :   )                  :  / `; ; 			jsm
+;;;; : :   ;                  :  ;  ; :                        
+`'`' / :  :                   :  :  : :
+    )_ \\__;      ";"          :_ ;  \\_\\       `,','
+    :__\\  \\    * `,'*         \\  \\  :  \\   *  8`;'* 
+        `^'     \\ :/           `^'  `-^-'  
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+_____________________________________________________________
+    TEMPLATE
+    puts ascii_cowphone
+    puts
 	end
 
 	def get_answer
+		puts "(type 'add', 'edit', 'display' or 'delete') "
+    # get_answer
+    print "What would you like to do today?: "
 		answer = gets.chomp
 	end
 
@@ -23,9 +50,14 @@ class SmartphoneView
 		print "edit to: "
 		new_value = gets.chomp
 		puts "editing..."
-		{   contact_name:contact_name,
-			field:edit_field,
-			new_value:new_value	}
+		if edit_field == 'name' || edit_field == 'number'
+			return {   	contact_name:contact_name,
+									field:edit_field,
+									new_value:new_value	}
+		else
+			puts "not a valid field"
+			edit_contact
+		end
 	end
 
   def input_error
