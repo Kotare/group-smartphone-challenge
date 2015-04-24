@@ -32,7 +32,6 @@ _____________________________________________________________
 	end
 
 	def get_answer
-    puts "Welcome to COW PHONE!"
     puts "\nWhat would you like to do today? type 'add', 'edit', 'view' or 'delete': "
 		answer = gets.chomp
 	end
