@@ -14,7 +14,6 @@ class SmartphoneController
 	def answer_loop
 		while true
 			current_answer = @view.get_answer
-			puts current_answer
 			case current_answer
 			when 'add'
 				add_contact
