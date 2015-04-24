@@ -33,7 +33,7 @@ _____________________________________________________________
 
 	def get_answer
     puts "Welcome to COW PHONE!"
-    puts "\nWhat would you like to do today? type 'add', 'edit', 'view' or 'delete': "
+    puts "\nWhat would you like to do today? type 'add', 'edit', 'view', 'delete', or 'turn off': "
 		answer = gets.chomp
 	end
 
@@ -63,10 +63,10 @@ _____________________________________________________________
     puts "Sorry, invalid input."
   end
 
-  def delete_contact(contact_name)
+  def delete_contact
     puts "What is the name of the contact you'd like to delete?"
     name = gets.chomp
-    puts "#{contact_name} has been deleted from your contact list."
+    puts "#{name} has been deleted from your contact list."
     name
   end
 
