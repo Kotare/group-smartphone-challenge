@@ -63,7 +63,7 @@ class SmartphoneController
 			@view.display_search_result(contact)
 		else
 			@view.contact_error(name)
-		endif
+		end
 	end
 end
 
