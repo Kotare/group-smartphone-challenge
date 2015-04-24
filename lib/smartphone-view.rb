@@ -16,7 +16,16 @@ class SmartphoneView
 	end
 
 	def edit_contact
-		#
+		print "name of contact to edit: "
+		contact_name = gets.chomp
+		print "field to edit - type 'name' or 'number': "
+		edit_field = gets.chomp
+		print "edit to: "
+		new_value = gets.chomp
+		puts "editing..."
+		{   contact_name:contact_name,
+			field:edit_field,
+			new_value:new_value	}
 	end
 
   def delete_contact(contact_name)
