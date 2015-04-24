@@ -31,15 +31,13 @@ _____________________________________________________________
 	end
 
 	def get_answer
-		puts "(type 'add', 'edit', 'display' or 'delete') "
-    # get_answer
-    print "What would you like to do today?: "
+    puts "Welcome to COW PHONE!"
+    puts "\nWhat would you like to do today? type 'add', 'edit', 'view' or 'delete': "
 		answer = gets.chomp
 	end
 
-	def add_contact
-		puts "What is your contact name?"
-		puts "What is your contact number?"
+	def add_contact(contact_name, contact_number)
+		puts "You added #{contact_name} and #{contact_number}"
 	end
 
 	def edit_contact
@@ -72,8 +70,8 @@ _____________________________________________________________
   end
 
   def view_contacts(contacts)
-    contacts.each do |contact|
-      puts "#{contact["name"].name}, #{contact["name"].number}"
+    contacts.contact_list.each do |key, value|
+      puts "#{value.name}, #{value.number}"
     end
   end
 
