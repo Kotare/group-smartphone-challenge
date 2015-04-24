@@ -32,7 +32,10 @@ class SmartphoneView
   end
 
   def delete_contact(contact_name)
+    puts "What is the name of the contact you'd like to delete?"
+    name = gets.chomp
     puts "#{contact_name} has been deleted from your contact list."
+    name
   end
 
   def view_contacts(contacts)
