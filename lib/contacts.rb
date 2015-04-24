@@ -14,7 +14,7 @@ class Contacts
   end
 
   def edit_contact(args)
-    contact = @contact_list[args[:contact_name]
-    contact.send(args[:field]) = args[:value]
+    # contact = @contact_list[args[:contact_name]
+    # contact.send(args[:field]) = args[:value]
   end
 end
