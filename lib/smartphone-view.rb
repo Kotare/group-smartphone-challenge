@@ -19,6 +19,10 @@ class SmartphoneView
 		#
 	end
 
+  def contact_error(contact_name)
+    puts "Sorry, can't find #{contact_name} in contacts."
+  end
+
   def delete_contact(contact_name)
     puts "#{contact_name} has been deleted from your contact list."
   end
