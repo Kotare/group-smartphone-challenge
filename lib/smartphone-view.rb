@@ -6,28 +6,29 @@ class SmartphoneView
     puts
     ascii_cowphone = <<-TEMPLATE
                                        /;    ;\\	     __i
-      -Bill Ames-                  __  \\____//	    |---| 
-                                  /{_\\_/   `'\\_     |[_]| 
+      -Bill Ames-                  __  \\____//	    |---|
+                                  /{_\\_/   `'\\_     |[_]|
                                   \\___   (o)  (o}   |:::|
-       _____________________________/          :-   |:::|  
+       _____________________________/          :-   |:::|
    ,-,'`@@@@@@@@       @@@@@@         \\_    `__\\    `\\   \\
-  ;:(  @@@@@@@@@        @@@             \\___(o'o)     \\_=_\\ 
-  :: )  @@@@          @@@@@@        ,'@@(  `===='   
-  :: : @@@@@:          @@@@         `@@@: 					
-  :: \\  @@@@@:       @@@@@@@)    (  '@@@' 					
-  ;; /\\      /`,    @@@@@@@@@\\   :@@@@@)                   
+  ;:(  @@@@@@@@@        @@@             \\___(o'o)     \\_=_\\
+  :: )  @@@@          @@@@@@        ,'@@(  `===='
+  :: : @@@@@:          @@@@         `@@@:
+  :: \\  @@@@@:       @@@@@@@)    (  '@@@'
+  ;; /\\      /`,    @@@@@@@@@\\   :@@@@@)
   ::/  )    {_----------------:  :~`,~~;
  ;;'`; :   )                  :  / `; ; 			jsm
-;;;; : :   ;                  :  ;  ; :                        
+;;;; : :   ;                  :  ;  ; :
 `'`' / :  :                   :  :  : :
     )_ \\__;      ";"          :_ ;  \\_\\       `,','
-    :__\\  \\    * `,'*         \\  \\  :  \\   *  8`;'* 
-        `^'     \\ :/           `^'  `-^-'  
+    :__\\  \\    * `,'*         \\  \\  :  \\   *  8`;'*
+        `^'     \\ :/           `^'  `-^-'
 TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
 _____________________________________________________________
     TEMPLATE
     puts ascii_cowphone
     puts
+    puts "\nWhat would you like to do today? type 'add', 'edit', 'view' or 'delete': "
 	end
 
 	def get_answer
@@ -37,9 +38,8 @@ _____________________________________________________________
 		answer = gets.chomp
 	end
 
-	def add_contact
-		puts "What is your contact name?"
-		puts "What is your contact number?"
+	def add_contact(contact_name, contact_number)
+		puts "You added #{contact_name} and #{contact_number}"
 	end
 
 	def edit_contact
@@ -72,8 +72,8 @@ _____________________________________________________________
   end
 
   def view_contacts(contacts)
-    contacts.each do |contact|
-      puts "#{contact["name"].name}, #{contact["name"].number}"
+    contacts.contact_list.each do |key, value|
+      puts "#{value.name}, #{value.number}"
     end
   end
 

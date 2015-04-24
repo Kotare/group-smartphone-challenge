@@ -23,7 +23,7 @@ class SmartphoneController
 			when 'delete'
 				delete_contact
 			when 'view'
-				view_contact
+				view
 			when 'search'
 				search
 			when 'turn_off'
@@ -36,16 +36,26 @@ class SmartphoneController
 	end
 
 	def add_contact
-		# @view
-		@contacts.add_contact(@view.add_contact)
+		print "name:"
+		contact_name = gets.chomp
+		print "number:"
+		contact_number = gets.chomp
+		@contacts.add_contact(contact_name, contact_number)
+		@view.add_contact(contact_name, contact_number)
 	end
 
 	def edit_contact
 		@contacts.edit_contact(@view.edit_contact)
 	end
 
-	def delete_contact
-		@contacts.delete_contacts(@view.delete_contact)
+
+	def delete_contact(contact_name)
+		if @contact_list.include?(contact_name)
+			@view.delete_contact(contact_name)
+			@contacts.delete_contact(contact_name)
+		else
+			@view.contact_error(contact_name)
+		end
 	end
 
 	def view
@@ -61,6 +71,7 @@ class SmartphoneController
 			@view.input_error
 		end
 	end
+end
 end
 
 cowphone = SmartphoneController.new
