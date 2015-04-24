@@ -6,10 +6,32 @@ class SmartphoneController
 	def initialize
 		@view = SmartphoneView.new
 		#@contacts = Contacts.new
+		@view.welcome
+		answer_loop
 	end
 
-	def turn_on
-		@view.welcome
+	def call_answer
+
+	end
+
+	def answer_loop
+		current_answer = @view.get_answer
+		puts current_answer
+		case current_answer
+		when 'add'
+			add_contact
+			p "hello"
+		when 'edit'
+
+		when 'delete'
+
+
+		end
+
+	end
+
+	 def add_contact
+		@view
 	end
 
 	def smartphone_run #LOGIC
@@ -27,4 +49,4 @@ class SmartphoneController
 end
 
 cowphone = SmartphoneController.new
-cowphone.turn_on
+
