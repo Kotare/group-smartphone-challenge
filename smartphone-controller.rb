@@ -44,13 +44,8 @@ class SmartphoneController
 		@contacts.edit_contact(@view.edit_contact)
 	end
 
-	def delete_contact(contact_name)
-		if @contact_list.include?(contact_name)
-			@view.delete_contact(contact_name)
-			@contacts.delete_contact(contact_name)
-		else 
-			@view.contact_error(contact_name)
-		end
+	def delete_contact
+		@contacts.delete_contacts(@view.delete_contact)
 	end
 
 	def view
