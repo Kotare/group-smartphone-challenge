@@ -25,7 +25,7 @@ class SmartphoneController
 				view
 			when 'search'
 				search
-			when 'turn_off'
+			when 'turn off'
 				@view.exit
 				exit
 			else
@@ -48,13 +48,8 @@ class SmartphoneController
 	end
 
 
-	def delete_contact(contact_name)
-		if @contact_list.include?(contact_name)
-			@view.delete_contact(contact_name)
-			@contacts.delete_contact(contact_name)
-		else
-			@view.contact_error(contact_name)
-		end
+	def delete_contact
+			@contacts.delete_contact(@view.delete_contact)
 	end
 
 	def view

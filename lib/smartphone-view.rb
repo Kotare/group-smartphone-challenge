@@ -62,10 +62,10 @@ _____________________________________________________________
     puts "Sorry, invalid input."
   end
 
-  def delete_contact(contact_name)
+  def delete_contact
     puts "What is the name of the contact you'd like to delete?"
     name = gets.chomp
-    puts "#{contact_name} has been deleted from your contact list."
+    puts "#{name} has been deleted from your contact list."
     name
   end
 
