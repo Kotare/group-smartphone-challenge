@@ -9,19 +9,25 @@ class SmartphoneController
 		@contacts = Contacts.new
 	end
 
-	def turn_on
-		@view.welcome
+	def turn_on 
+		
+
 	end
 
 	def smartphone_run #LOGIC
 
 	end
 
+	def edit_contact
+		@contacts.edit_contact(@view.edit_contact)
+	end
+
 	def delete_contact(contact_name)
 		if @contact_list.include?(contact_name)
 			@view.delete_contact(contact_name)
 			@contacts.delete_contact(contact_name)
-		else @view.contact_error(contact_name)
+		else 
+			@view.contact_error(contact_name)
 		end
 	end
 
