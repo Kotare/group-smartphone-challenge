@@ -28,13 +28,12 @@ _____________________________________________________________
     TEMPLATE
     puts ascii_cowphone
     puts
-    puts "\nWhat would you like to do today? type 'add', 'edit', 'view' or 'delete': "
+
 	end
 
 	def get_answer
-		puts "(type 'add', 'edit', 'display' or 'delete') "
-    # get_answer
-    print "What would you like to do today?: "
+    puts "Welcome to COW PHONE!"
+    puts "\nWhat would you like to do today? type 'add', 'edit', 'view' or 'delete': "
 		answer = gets.chomp
 	end
 
