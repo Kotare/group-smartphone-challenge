@@ -48,7 +48,7 @@ class SmartphoneController
 		if @contact_list.include?(contact_name)
 			@view.delete_contact(contact_name)
 			@contacts.delete_contact(contact_name)
-		else 
+		else
 			@view.contact_error(contact_name)
 		end
 	end
@@ -57,7 +57,8 @@ class SmartphoneController
 		@view.view_contacts(@contacts)
 	end
 
-	def search(name)
+	def search
+		name = gets
 		contact = @contacts.search(name)
 		if (contact)
 			@view.display_search_result(contact)
