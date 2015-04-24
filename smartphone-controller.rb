@@ -5,7 +5,7 @@ require_relative './lib/contacts'
 class SmartphoneController
 	def initialize
 		@view = SmartphoneView.new
-		#@contacts = Contacts.new
+		@contacts = Contacts.new
 	end
 
 	def turn_on
@@ -19,6 +19,10 @@ class SmartphoneController
 	def delete_contact(contact_name)
 		@view.delete_contact(contact_name)
 		@contacts.delete_contact(contact_name)
+	end
+
+	def view
+		@view.view_contacts(@contacts)
 	end
 
 	def turn_off
