@@ -26,4 +26,10 @@ class SmartphoneView
   def delete_contact(contact_name)
     puts "#{contact_name} has been deleted from your contact list."
   end
+
+  def view_contacts(contacts)
+    contacts.each do |contact|
+      puts "#{contact["name"].name}, #{contact["name"].number}"
+    end
+  end
 end
