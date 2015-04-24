@@ -41,4 +41,8 @@ class SmartphoneView
       puts "#{contact["name"].name}, #{contact["name"].number}"
     end
   end
+
+  def display_search_result(contact)
+    puts "#{contact.name}, #{contact.number}"
+  end
 end
