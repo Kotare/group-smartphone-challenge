@@ -52,13 +52,14 @@ class SmartphoneController
 		@view.view_contacts(@contacts)
 	end
 
-	def search(name)
+	def search
+		name = gets
 		contact = @contacts.search(name)
 		if (contact)
 			@view.display_search_result(contact)
 		else
 			@view.contact_error(name)
-		endif
+		end
 	end
 end
 
